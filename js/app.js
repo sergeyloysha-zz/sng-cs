@@ -15,6 +15,12 @@ $(function() {
     $('.nav').toggleClass('nav--opened');
   });
 
+  $('#search').on('click', function(e) {
+    e.preventDefault();
+    $('.search').toggleClass('search--opened');
+    $('.search__input').focus();
+  });
+
   var slider = $('.watch-landing__list').lightSlider({
     item:6,
     loop:false,
@@ -44,5 +50,17 @@ $(function() {
   });
   $('#slider-next').click(function(){
       slider.goToNextSlide();
+  });
+
+  $('[data-people-id]').on('click', function(e){
+    e.preventDefault();
+    $('html').addClass('overlay--open');
+    $('.overlay').removeClass('overlay--hidden');
+  });
+
+  $('.popup__control').on('click', function(e){
+    e.preventDefault();
+    $('html').removeClass('overlay--open');
+    $('.overlay').addClass('overlay--hidden');
   });
 });
