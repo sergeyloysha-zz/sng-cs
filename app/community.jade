@@ -8,7 +8,7 @@ block content
         .col-sm-6.col-xs-12
           .row
             .col-sm-4.col-xs-4
-              .people
+              .people(data-people-id='test')
                 img(src='http://place-hold.it/400x400').people__photo
             .col-sm-8.col-xs-8
               .community__head
@@ -17,14 +17,14 @@ block content
             .col-sm-4.col-xs-4
               .row
                 .col-sm-12.col-xs-12
-                  .people
+                  .people(data-people-id='test')
                     img(src='http://place-hold.it/400x400').people__photo
               .row
                 .col-sm-12.col-xs-12
-                  .people
+                  .people(data-people-id='test')
                     img(src='http://place-hold.it/400x400').people__photo
             .col-sm-8.col-xs-8
-              .people.people--large
+              .people.people--large(data-people-id='test')
                 img(src='http://place-hold.it/400x400').people__photo
                 .people__info
                   span.people__name Terry Halvorsen
@@ -34,64 +34,78 @@ block content
             .col-sm-4.col-xs-4
               .row
                 .col-sm-12.col-xs-12
-                  .people
+                  .people(data-people-id='test')
                     img(src='http://place-hold.it/400x400').people__photo
               .row
                 .col-sm-12.col-xs-12
-                  .people
+                  .people(data-people-id='test')
                     img(src='http://place-hold.it/400x400').people__photo
             .col-sm-8.col-xs-8
-              .people.people--large
+              .people.people--large(data-people-id='test')
                 img(src='http://place-hold.it/400x400').people__photo
                 .people__info
                   span.people__name Terry Halvorsen
                   span.people__meta His Title, His agency name
           .row
             .col-sm-4.col-xs-4
-              .people
+              .people(data-people-id='test')
                 img(src='http://place-hold.it/400x400').people__photo
             .col-sm-4.col-xs-4
-              .people
+              .people(data-people-id='test')
                 img(src='http://place-hold.it/400x400').people__photo
             .col-sm-4.col-xs-4
-              .people
+              .people(data-people-id='test')
                 img(src='http://place-hold.it/400x400').people__photo
       .row
         .col-sm-6.col-xs-12
           .row
             .col-sm-4.col-xs-4
-              .people
+              .people(data-people-id='test')
                 img(src='http://place-hold.it/400x400').people__photo
             .col-sm-4.col-xs-4
-              .people
+              .people(data-people-id='test')
                 img(src='http://place-hold.it/400x400').people__photo
             .col-sm-4.col-xs-4
-              .people
+              .people(data-people-id='test')
                 img(src='http://place-hold.it/400x400').people__photo
           .row
             .col-sm-4.col-xs-4
-              .people
+              .people(data-people-id='test')
                 img(src='http://place-hold.it/400x400').people__photo
             .col-sm-4.col-xs-4
-              .people
+              .people(data-people-id='test')
                 img(src='http://place-hold.it/400x400').people__photo
             .col-sm-4.col-xs-4
-              .people
+              .people(data-people-id='test')
                 img(src='http://place-hold.it/400x400').people__photo
         .col-sm-6.col-xs-12
           .row
             .col-sm-4.col-xs-4
               .row
                 .col-sm-12.col-xs-12
-                  .people
+                  .people(data-people-id='test')
                     img(src='http://place-hold.it/400x400').people__photo
                 .col-sm-12.col-xs-12
-                  .people
+                  .people(data-people-id='test')
                     img(src='http://place-hold.it/400x400').people__photo
             .col-sm-8.col-xs-8
-              .people.people--large
+              .people.people--large(data-people-id='test')
                 img(src='http://place-hold.it/400x400').people__photo
                 .people__info
                   span.people__name Terry Halvorsen
                   span.people__meta His Title, His agency name
   include templates/footer
+  section.overlay.overlay--hidden
+    .popup
+      a.popup__control(href='#')
+      .popup__inner.card
+        .card__top
+          .card__photo
+            img(src="http://place-hold.it/300x300", alt="")
+          .card__meta
+            .card__name First Last
+            .card__meta-line Title title title
+            .card__meta-line Agency agency agency
+        .card__bottom
+          span.card__info Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+            

@@ -1103,6 +1103,7 @@ h5
     margin 3% 0
 
   &__input
+    font-family 'Helvetica Neue', Helvetica, Arial
     flex 1
     min-width 50px
     padding 10px
@@ -1127,3 +1128,125 @@ h5
   background url('../images/icons/more.svg') center no-repeat
   background-size 20px 20px
   cursor pointer
+
+.overlay
+  position fixed
+  top 0
+  right 0
+  bottom 0
+  left 0
+  z-index 101
+  overflow-y auto
+  opacity 1
+  transition opacity .2s ease-in
+  background alpha(color-black, 0.7)
+  text-align center
+
+  &--open
+    position static !important
+    overflow hidden
+
+  &--hidden
+    transition opacity .3s ease-in,visibility .3s ease-in
+    visibility hidden
+    overflow hidden
+    opacity 0
+
+    .popup
+      transform translateY(-100px)
+      opacity 0
+
+.popup
+  display inline-block
+  position relative
+  max-width 700px
+  margin 65px 3%
+  box-shadow 0 5px 15px 0 alpha(color-black, 0.5)
+  transform translateY(0)
+  opacity 1
+  transition: transform .3s, opacity .3s
+
+  +mediaMin(size-m)
+    margin 120px 0
+
+  &__inner
+    padding 30px
+    background color-black
+
+  &__control
+    position absolute
+    top 0
+    right 0
+    width 40px
+    height 40px
+    background color-black
+
+    &:after
+      content ' '
+      position absolute
+      top 10px
+      left 10px
+      right 10px
+      bottom 10px
+      width 20px
+      height 20px
+      background url('../images/icons/close-white.svg') center no-repeat
+      background-size 14px 14px
+      opacity 1
+      transition opacity .2s
+
+    &:hover
+      &:after
+        opacity 0.5
+
+.card
+  text-align left
+  &__top
+    display flex
+    margin-bottom 3%
+
+    +mediaMin(size-m)
+      margin-bottom 30px
+
+  &__photo
+    max-width 125px
+    height 125px
+    margin-right 3%
+
+    +mediaMin(size-m)
+      max-width 250px
+      height 250px
+      margin-right 30px
+
+    img
+      display block
+      max-width 125px
+      height auto
+
+      +mediaMin(size-m)
+        max-width 250px
+
+  &__name
+    font-family font-condensed
+    font-weight 300
+    color color-pink
+    font-size 3.5rem
+    line-height 4rem
+    text-transform uppercase
+    margin 0 0 10px 0
+
+    +mediaMin(size-m)
+      font-size 6.5rem
+      line-height 7rem
+
+  &__meta-line
+    display block
+    color color-white
+
+    +mediaMin(size-m)
+      font-size 2.4rem
+      line-height 3rem
+
+  &__bottom
+    font-family font-base
+    color color-white
