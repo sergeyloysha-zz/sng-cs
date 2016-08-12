@@ -1,0 +1,190 @@
+.header
+  position fixed
+  width 100%
+  max-width 1200px
+  margin 0 0 3% 0
+  z-index 1000
+
+  +mediaMin(size-s)
+    position static
+
+  +mediaMin(size-m)
+    margin 0 auto 30px auto
+
+
+
+  &__head
+    position relative
+    display flex
+    justify-content space-between
+    align-items center
+    padding 10px 3%
+    height 50px
+    background-color color-white
+    box-shadow 0 4px 6px 0 alpha(color-black, 0.2)
+    border-bottom 1px solid #cccccc
+
+    +mediaMin(size-s)
+      padding 10px 30px
+      height 72px
+      box-shadow none
+      border-bottom 0
+
+  &__nav
+    position relative
+    //display none
+
+    +mediaMin(size-s)
+      display block
+
+  &__link
+  &__parent
+    position relative
+    display flex
+    align-items center
+    font-family 'firasans-web'
+    font-weight 500
+    font-size 1.1rem
+    line-height 1.4rem
+    text-transform uppercase
+    color color-black
+    letter-spacing 0.15rem
+
+  &__link
+    &:after
+      content ' '
+      display inline-block
+      position absolute
+      bottom 0
+      left 0
+      width 0
+      height 2px
+      background-color color-pink
+      transition width 0.2s
+
+    &:hover:after
+      width 100%
+
+  &__parent
+    i
+      display block
+      width 50px
+      height 43px
+      background url('../images/logo-sng.png') center no-repeat
+      background-size 50px 43px
+      margin 0 0 0 10px
+
+  &__logo
+    position absolute
+    left 50%
+    margin-left -50px
+
+    +mediaMin(size-s)
+      margin-left -100px
+
+  &__right
+    display flex
+    align-items center
+
+  &__control
+    display flex
+    width 50px
+    height 50px
+    align-items center
+    justify-content center
+    cursor pointer
+
+    +mediaMin(size-s)
+      width 30px
+      height 30px
+      margin 0 0 0 10px
+
+    &-icon
+      display block
+      width 30px
+      height 30px
+      background-position center
+      background-repeat no-repeat
+
+      &--menu
+        background-image url('../images/icons/menu.svg')
+        background-size 20px 14px
+      &--search
+        background-image url('../images/icons/search.svg')
+        background-size 20px 21px
+    &--opened
+      .header__control-icon--menu
+        background-image url('../images/icons/close.svg')
+        background-size 16px 16px
+
+.logo
+  display block
+  width 100px
+  height 30px
+  background url('../images/logo.svg') center no-repeat
+  background-size 100px 26px
+
+  +mediaMin(size-s)
+    width 200px
+    height 52px
+    background-size 200px 52px
+
+.nav
+  position absolute
+  top 50px
+  width 100%
+  background color-white
+  max-height 0px
+  overflow hidden
+  transition max-height 0.2s
+
+  +mediaMin(size-s)
+    position relative
+    max-height initial
+    top 0
+    border-top 1px solid #c6c6c6
+    border-bottom 1px solid #c6c6c6
+    box-shadow 0 3px 4px 0 alpha(color-black, 0.05)
+
+  &--opened
+    max-height 1000px
+
+  &__list
+    display flex
+    flex-direction column
+    margin 0
+    padding 0
+    list-style none
+
+    +mediaMin(size-s)
+      flex-direction row
+
+  &__item
+    border-bottom 1px solid #c6c6c6
+
+    +mediaMin(size-s)
+      flex-grow 0
+      flex-basis 25%
+      border-right 1px solid #c6c6c6
+      border-bottom 0
+
+      &:first-child
+        border-left 1px solid #c6c6c6
+
+  &__link
+    display block
+    padding 15px 3%
+    text-align center
+    font-family 'purista-web'
+    font-weight 400
+    font-size 1.8rem
+    text-transform uppercase
+    color color-black
+    transition background 0.2s, color 0.3s
+
+    +mediaMin(size-s)
+      font-size 1.2rem
+      padding 6px 10px
+
+    &:hover
+      color color-pink
