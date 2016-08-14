@@ -11,29 +11,24 @@
   <body>
     <header class="header">
       <div class="header__head"><a href="#" class="header__link">Subscribe</a><a href="#" class="header__logo logo"></a>
-        <div class="header__right"><span class="header__parent show-s">Brought to you by<i></i></span>
+        <div class="header__right"><a href="http://scoopnewsgroup.com/" target="_blank" class="header__link show-s">Brought to you by<i></i></a>
           <div id="search" class="header__control"><i class="header__control-icon header__control-icon--search"></i></div>
           <div id="menu" class="header__control hide-s"><i class="header__control-icon header__control-icon--menu"></i></div>
         </div>
       </div>
       <nav class="header__nav nav">
-        <ul class="nav__list">
+        <ul role="navigation" class="nav__list">
           <li class="nav__item"><a href="#" class="nav__link nav__link--government">Government</a></li>
           <li class="nav__item"><a href="#" class="nav__link nav__link--transportation">Transportation</a></li>
-          <li class="nav__item"><a href="#" class="nav__link nav__link--healthcare">Healthcare</a></li>
+          <li class="nav__item nav__item--active"><a href="#" class="nav__link nav__link--healthcare">Healthcare</a></li>
           <li class="nav__item"><a href="#" class="nav__link nav__link--technology">Technology</a></li>
           <li class="nav__item"><a href="#" class="nav__link nav__link--financial">Financial</a></li>
           <li class="nav__item"><a href="#" class="nav__link nav__link--watch">Watch</a></li>
           <li class="nav__item"><a href="#" class="nav__link nav__link--listen">Listen</a></li>
           <li class="nav__item"><a href="#" class="nav__link nav__link--attend">Attend</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Community</a></li>
+          <li class="nav__item"><a href="#" class="nav__link nav__link--community">Community</a></li>
         </ul>
       </nav>
-      <div id="search" class="header__search search">
-        <div class="search__inner">
-          <input type="text" name="search" placeholder="Search" class="search__input">
-        </div>
-      </div>
     </header>
     <div class="wrapper">
       <div class="watch-landing">
@@ -101,6 +96,11 @@
         </div>
       </div>
     </footer>
+    <div class="overlay-search">
+      <form method="post" action="/" role="search" class="overlay-search-form">
+        <input name="search" placeholder="Type to search" class="overlay-search-input">
+      </form><span class="search-close">×</span>
+    </div>
     <script src="js/app.js"></script>
   </body>
 </html>
