@@ -1,5 +1,4 @@
 @require 'lightslider.min.css'
-@require 'flexboxgrid.css'
 @import '_normalize'
 @import '_fonts'
 
@@ -23,11 +22,17 @@ color-pink = #ed2a7a
 /*
   Category colors
 */
-color-technology = #42467c
+color-technology = #42467C
 color-government = #330047
-color-transportation = #002e4a
-color-financial = #426f73
-color-healthcare = #0a2239
+color-transportation = #002E4A
+color-financial = #426F73
+color-healthcare = #0A2239
+color-watch = #5C707C
+color-listen = #1E5F4C
+color-attend = #054A29
+color-community = #132E32
+
+trs-function = cubic-bezier(.33,.66,.66,1)
 
 mediaMin(minWidth)
   @media screen and (min-width: minWidth)
@@ -45,7 +50,7 @@ mediaBetween(minWidth, maxWidth)
     -webkit-tap-highlight-color: alpha(color-white, 0)
 
 ::selection
-  background alpha(color-pink, 0.05)
+  background alpha(color-black, 0.05)
 
 input
 textarea
@@ -54,7 +59,6 @@ textarea
 
 html
   font-size 62.5%
-  background color-gray
   text-rendering optimizeLegibility
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
@@ -73,6 +77,7 @@ a:link
 a:active
 a:visited
   text-decoration none
+  cursor pointer
 
 h1
 h2
@@ -85,10 +90,10 @@ h5
 .h4
 .h5
   font-family font-condensed
-  margin 0 0 10px 0
+  margin 0 0 3% 0
 
   +mediaMin(size-s)
-    margin 0 0 20px 0
+    margin 0 0 3rem 0
 
 h1
   font-size 3rem
@@ -97,6 +102,15 @@ h1
   +mediaMin(size-s)
     font-size 5rem
     line-height 5.8rem
+
+h2
+.h2
+  font-size 2.6rem
+  line-height 2.8rem
+
+  +mediaMin(size-s)
+    font-size 4rem
+    line-height 4.4rem
 
 h3
 .h3
@@ -137,11 +151,11 @@ h5
 
 .wrapper
   position relative
-  j_center(1200px)
+  //j_center(1200px)
   padding-top calc(50px + 3%)
 
   +mediaMin(size-s)
-    padding-top 0
+    padding-top calc(136px)
 
 .container
   margin 0 3%
@@ -149,38 +163,61 @@ h5
   +mediaMin(size-m)
     j_center(980px)
 
-.news-list
+.articles
   background color-white
   padding 3%
   box-shadow 0 3px 5px 0 alpha(color-black, 0.3)
+  border-top 1rem solid color-black
+  border-bottom 0.3rem solid color-black
   margin 0 0 3% 0
 
   +mediaMin(size-s)
     padding 0
     box-shadow none
     background transparent
+    border-top none
+    border-bottom 0.5rem solid color-black
+
+  &--noborder
+    border-bottom none
+
+  &--nomargin
+    margin 0
 
   &__list
     cf()
 
   &__item
-    margin-bottom 3%
+    margin 3% 0
 
-    +mediaMin(size-s)
-      col(1/3, cycle: 3)
+    +mediaMin(size-m)
+      margin 30px 0
 
-  &__load
+    &:first-child
+      margin 0 0 3% 0
+
+      +mediaMin(size-m)
+        margin 0 0 30px 0
+
+    &--third
+      margin 0 0 3% 0
+
+      +mediaMin(size-s)
+        col(1/3, cycle: 3)
+
+      +mediaMin(size-m)
+        margin 0 3% 30px 0
+
+  &__more
     display block
-    background #ee2a7b
-    padding 12px 0 8px 0
+    background color-pink
+    padding 8px 0 4px 0
     text-transform uppercase
     color color-white
     text-align center
     font-family 'adellesans-web'
     font-weight 700
-    font-size 2.5rem
-    line-height 3rem
-    border 5px solid #ee2a7b
+    border 3px solid color-pink
     transition background 0.2s, color 0.2s
     cursor pointer
 
@@ -192,8 +229,33 @@ h5
       background color-pink
       color color-black
 
+    +mediaMin(size-m)
+      padding 12px 0 8px 0
+      font-size 2.5rem
+      line-height 3rem
+      border 5px solid #ee2a7b
+
+  &__load
+    display flex
+    align-items center
+    justify-content center
+    cursor pointer
+    padding 3% 0
+    text-align center
+
+    i
+      display block
+      width 20px
+      height 20px
+      background url('../images/icons/more.svg') center no-repeat
+      background-size 20px 20px
+
+    +mediaMin(size-m)
+      padding 30px 0
+
 
 .news
+  cf()
   border-bottom 1px solid color-black
 
   +mediaMin(size-s)
@@ -212,16 +274,6 @@ h5
       .news__short
         height 80px
 
-  &--horizontal
-    cf()
-    .news__image
-      +mediaMin(size-s)
-        col(1/3)
-
-    .news__information
-      +mediaMin(size-s)
-        col(2/3)
-
   &__image
     display block
     width 100%
@@ -233,26 +285,87 @@ h5
     +mediaMin(size-s)
       height 170px
 
+    &--line
+      +mediaMin(size-s)
+        col(1/3)
+
+  &__information
+    &--line
+      +mediaMin(size-s)
+        col(2/3)
+
   &__category
     margin 10px 0
 
     &-link
+      position relative
       display inline-block
       font-weight 700
       font-size 1.1rem
       text-transform uppercase
       color color-black
 
-      &--technology
-        color color-technology
+      &:before
+        position absolute
+        top -0.25rem
+        bottom -0.1rem
+        right -0.35rem
+        left -0.35rem
+        content " "
+        opacity 0
+        transition all 0.15s ease-in-out
+        transform scale(1.1)
+        z-index -1
+
+      &:hover:before
+        border-radius 2px
+        opacity 0.15
+        transform scale(1)
+
       &--government
         color color-government
+        &:before
+          background color-government
+
       &--transportation
         color color-transportation
-      &--financial
-        color color-financial
+        &:before
+          background color-transportation
+
       &--healthcare
         color color-healthcare
+        &:before
+          background color-healthcare
+
+      &--technology
+        color color-technology
+        &:before
+          background color-technology
+
+      &--financial
+        color color-financial
+        &:before
+          background color-financial
+
+      &--watch
+        color color-watch
+        &:before
+          background color-watch
+
+      &--listen
+        color color-listen
+        &:before
+          background color-listen
+
+      &--attend
+        color color-attend
+        &:before
+          background color-attend
+
+      &--community
+        color color-community
+        &:before
+          background color-community
 
   &__title
     display block
@@ -306,42 +419,22 @@ h5
     line-height 4rem
     border-bottom 5px solid #000
 
-.news-more
-  border-bottom 3px solid #000
-  background #fff
-  padding 3%
-  box-shadow 0 3px 5px 0 alpha(color-black, 0.3)
-  margin 3% 0
-
-  +mediaMin(size-s)
-    padding 0
-    box-shadow none
-    border-bottom 5px solid #000
-
-  +mediaMin(size-m)
-    margin 30px 0
-
-  &__item
-    margin 3% 0
-
-.page-image
+.page-hero
   display flex
   flex-direction column
   justify-content flex-end
   position relative
   width 100%
-  background-image url('../images/page-image-home.jpg')
+  min-height 25vw
   background-repeat no-repeat
   background-position center 70%
   background-size cover
-  padding 10% 0 3% 0
+  padding 3% 0
   margin-bottom 3%
-  cursor default
 
   +mediaMin(size-m)
-    height 350px
     margin 0 0 30px 0
-    padding 0 0 30px 0
+    padding 30px 0
 
   &:before
     content ' '
@@ -352,10 +445,6 @@ h5
     left 0
     background alpha(color-black, 0.3)
     transition background 0.2s
-
-  &:hover
-    &:before
-      background alpha(color-black, 0.35)
 
   &__inner
     position relative
@@ -451,10 +540,12 @@ h5
   padding 3%
   box-shadow 0 3px 5px 0 alpha(color-black, 0.3)
   margin 3% 0
+  border-top 1rem solid color-black
 
   +mediaMin(size-s)
     padding 0
     box-shadow none
+    border-top none
 
   +mediaMin(size-m)
     margin 30px 0
@@ -635,55 +726,78 @@ h5
   margin 3% 0
   +mediaMin(size-s)
     margin 0
-    padding 50px 0 10px 0
+    padding 50px 0 20px 0
     background #f4f4f4
 
 .article
   background color-white
   +mediaMin(size-s)
     background transparent
+
+  &__header
+  &__inner
+    j_center(86.25vw)
+
+    +mediaMin(size-m)
+      max-width 980px
+      margin-bottom 3rem
+
   &__category
     display block
     font-weight 700
     font-size 1.2rem
     color #0600ff
     text-transform uppercase
-    padding 3% 0 0 0
+    padding-top 3%
 
     +mediaMin(size-s)
-      padding 0
       font-size 2rem
 
     +mediaMin(size-m)
-      margin 0
+      padding-top 0
+      margin 0 0 1rem 0
+
+    &--government
+      color color-government
+
+    &--transportation
+      color color-transportation
+
+    &--healthcare
+      color color-healthcare
+
+    &--technology
+      color color-technology
+
+    &--financial
+      color color-financial
+
+    &--watch
+      color color-watch
+
+    &--listen
+      color color-listen
+
+    &--attend
+      color color-attend
+
+    &--community
+      color color-community
 
   &__title
     font-size 3rem
     line-height 3.4rem
     color #333
-    margin 3% 0
 
     +mediaMin(size-s)
       font-size 6rem
       line-height 6.5rem
 
-    +mediaMin(size-m)
-      margin 15px 0 30px 0
-
   &__image
     display block
     width 100%
-    height 250px
-    background-repeat no-repeat
-    background-size cover
 
-    +mediaMin(size-s)
-      height 450px
-
-    +mediaMin(size-m)
-      height 580px
-
-    img
+    &-img
       display block
       width 100%
     &-info
@@ -728,7 +842,7 @@ h5
 
         +mediaMin(size-s)
           font-size 2rem
-          line-height 2.4rem
+          line-height 2.8rem
 
         +mediaMin(size-m)
           margin 30px 0
@@ -818,9 +932,12 @@ h5
       background-size 24px 22px
 
 .watch-landing
-  padding 30px 0
+  padding 0
   background #f7f7f7
   margin 0 0 3% 0
+
+  +mediaMin(size-s)
+    padding 30px 0
 
   +mediaMin(size-m)
     margin 0 0 30px 0
@@ -941,38 +1058,78 @@ h5
   display none
 
 .community
-  padding 3%
-  margin 3%
-  background #fff
-  box-shadow 0 3px 5px 0 alpha(color-black, 0.3)
+  border-top 1rem solid color-black
+  margin 0 3%
 
   +mediaMin(size-s)
-    margin 0 0 30px 0
-    padding 0
-    box-shadow none
-  &__head
-    margin 5%
+    border-top 0
+
+  +mediaMin(size-m)
+    margin-bottom 30px
+
+  &--hidden
+    opacity 0
+    height 2000px
+
+  &__container
+    cf()
+    box-shadow 0 3px 5px 0 alpha(color-black, 0.3)
+    margin 0 -3%
+
+    +mediaMin(size-s)
+      box-shadow none
+      margin 0 auto
+    +mediaMin(size-m)
+      max-width 1200px
+
+  &__title
     display block
 
-    &-img
+    img
       display block
-      width 100%
+      width 80%
       height auto
+
+    +mediaMin(size-s)
+      display none
 
 
 .people
   position relative
-  width 100%
-  margin-bottom 1rem
-  box-shadow 0 5px 10px 0 alpha(color-black, 0.4)
-  transition box-shadow 0.2s
-  cursor pointer
+  float left
+  width 50%
+  padding 1rem
 
-  &:hover
-    box-shadow 0 5px 15px 0 alpha(color-black, 0.6)
+  +mediaMin(size-s)
+    width 16.6666667%
+
+  &__link
+    position relative
+    transition box-shadow 0.2s trs-function
+    cursor pointer
+    box-shadow 0 5px 10px 0 alpha(color-black, 0.4)
+
+    &:hover
+      box-shadow 0 5px 15px 0 alpha(color-black, 0.5)
+
+  &--community
+    padding 10px 20px
+    width 100%
+
+    +mediaMin(size-s)
+      width 33.3333334%
+
+    .people__link
+      box-shadow none
 
   &--large
-    border 5px solid color-black
+    width 100%
+
+    +mediaMin(size-s)
+      width 33.3333334%
+
+    .people__link
+      border 5px solid color-black
 
   &__photo
     display block
@@ -1121,21 +1278,13 @@ h5
     color color-white
     cursor pointer
 
-.load-more
-  width 100%
-  height 20px
-  margin 30px 0
-  background url('../images/icons/more.svg') center no-repeat
-  background-size 20px 20px
-  cursor pointer
-
 .overlay
   position fixed
   top 0
   right 0
   bottom 0
   left 0
-  z-index 101
+  z-index 99999
   overflow-y auto
   opacity 1
   transition opacity .2s ease-in

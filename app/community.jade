@@ -3,97 +3,80 @@ extends templates/base
 block content
   include templates/header
   .wrapper
-    .community
-      .row
-        .col-sm-6.col-xs-12
-          .row
-            .col-sm-4.col-xs-4
-              .people(data-people-id='test')
-                img(src='http://place-hold.it/400x400').people__photo
-            .col-sm-8.col-xs-8
-              .community__head
-                img(src="images/community.png").community__head-img
-          .row
-            .col-sm-4.col-xs-4
-              .row
-                .col-sm-12.col-xs-12
-                  .people(data-people-id='test')
-                    img(src='http://place-hold.it/400x400').people__photo
-              .row
-                .col-sm-12.col-xs-12
-                  .people(data-people-id='test')
-                    img(src='http://place-hold.it/400x400').people__photo
-            .col-sm-8.col-xs-8
-              .people.people--large(data-people-id='test')
-                img(src='http://place-hold.it/400x400').people__photo
-                .people__info
-                  span.people__name Terry Halvorsen
-                  span.people__meta His Title, His agency name
-        .col-sm-6.col-xs-12
-          .row
-            .col-sm-4.col-xs-4
-              .row
-                .col-sm-12.col-xs-12
-                  .people(data-people-id='test')
-                    img(src='http://place-hold.it/400x400').people__photo
-              .row
-                .col-sm-12.col-xs-12
-                  .people(data-people-id='test')
-                    img(src='http://place-hold.it/400x400').people__photo
-            .col-sm-8.col-xs-8
-              .people.people--large(data-people-id='test')
-                img(src='http://place-hold.it/400x400').people__photo
-                .people__info
-                  span.people__name Terry Halvorsen
-                  span.people__meta His Title, His agency name
-          .row
-            .col-sm-4.col-xs-4
-              .people(data-people-id='test')
-                img(src='http://place-hold.it/400x400').people__photo
-            .col-sm-4.col-xs-4
-              .people(data-people-id='test')
-                img(src='http://place-hold.it/400x400').people__photo
-            .col-sm-4.col-xs-4
-              .people(data-people-id='test')
-                img(src='http://place-hold.it/400x400').people__photo
-      .row
-        .col-sm-6.col-xs-12
-          .row
-            .col-sm-4.col-xs-4
-              .people(data-people-id='test')
-                img(src='http://place-hold.it/400x400').people__photo
-            .col-sm-4.col-xs-4
-              .people(data-people-id='test')
-                img(src='http://place-hold.it/400x400').people__photo
-            .col-sm-4.col-xs-4
-              .people(data-people-id='test')
-                img(src='http://place-hold.it/400x400').people__photo
-          .row
-            .col-sm-4.col-xs-4
-              .people(data-people-id='test')
-                img(src='http://place-hold.it/400x400').people__photo
-            .col-sm-4.col-xs-4
-              .people(data-people-id='test')
-                img(src='http://place-hold.it/400x400').people__photo
-            .col-sm-4.col-xs-4
-              .people(data-people-id='test')
-                img(src='http://place-hold.it/400x400').people__photo
-        .col-sm-6.col-xs-12
-          .row
-            .col-sm-4.col-xs-4
-              .row
-                .col-sm-12.col-xs-12
-                  .people(data-people-id='test')
-                    img(src='http://place-hold.it/400x400').people__photo
-                .col-sm-12.col-xs-12
-                  .people(data-people-id='test')
-                    img(src='http://place-hold.it/400x400').people__photo
-            .col-sm-8.col-xs-8
-              .people.people--large(data-people-id='test')
-                img(src='http://place-hold.it/400x400').people__photo
-                .people__info
-                  span.people__name Terry Halvorsen
-                  span.people__meta His Title, His agency name
+    
+    .community.community--hidden
+      .community__title
+        img(src='images/community.png')
+      .community__container
+        .people
+          .people__link(data-people-id='test')
+            img(src='http://place-hold.it/400x400').people__photo
+        .people.people--community.show-s
+          .people__link
+            img(src='images/community.png').people__photo
+        .people
+          .people__link(data-people-id='test')
+            img(src='http://place-hold.it/400x400').people__photo
+        .people.people--large
+          .people__link(data-people-id='test')
+            img(src='http://place-hold.it/400x400').people__photo
+            .people__info
+              span.people__name Terry Halvorsen
+              span.people__meta His Title, His agency name
+        .people
+          .people__link(data-people-id='test')
+            img(src='http://place-hold.it/400x400').people__photo
+        .people.people--large
+          .people__link(data-people-id='test')
+            img(src='http://place-hold.it/400x400').people__photo
+            .people__info
+              span.people__name Terry Halvorsen
+              span.people__meta His Title, His agency name
+        .people
+          .people__link(data-people-id='test')
+            img(src='http://place-hold.it/400x400').people__photo
+        .people
+          .people__link(data-people-id='test')
+            img(src='http://place-hold.it/400x400').people__photo
+        .people
+          .people__link(data-people-id='test')
+            img(src='http://place-hold.it/400x400').people__photo
+        .people
+          .people__link(data-people-id='test')
+            img(src='http://place-hold.it/400x400').people__photo
+        .people
+          .people__link(data-people-id='test')
+            img(src='http://place-hold.it/400x400').people__photo
+        .people
+          .people__link(data-people-id='test')
+            img(src='http://place-hold.it/400x400').people__photo
+        .people
+          .people__link(data-people-id='test')
+            img(src='http://place-hold.it/400x400').people__photo
+        .people
+          .people__link(data-people-id='test')
+            img(src='http://place-hold.it/400x400').people__photo
+        .people
+          .people__link(data-people-id='test')
+            img(src='http://place-hold.it/400x400').people__photo
+        .people.people--large
+          .people__link(data-people-id='test')
+            img(src='http://place-hold.it/400x400').people__photo
+            .people__info
+              span.people__name Terry Halvorsen
+              span.people__meta His Title, His agency name
+        .people
+          .people__link(data-people-id='test')
+            img(src='http://place-hold.it/400x400').people__photo
+        .people
+          .people__link(data-people-id='test')
+            img(src='http://place-hold.it/400x400').people__photo
+        .people
+          .people__link(data-people-id='test')
+            img(src='http://place-hold.it/400x400').people__photo
+        .people
+          .people__link(data-people-id='test')
+            img(src='http://place-hold.it/400x400').people__photo
   include templates/footer
   section.overlay.overlay--hidden
     .popup

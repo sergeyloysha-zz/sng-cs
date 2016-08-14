@@ -3,19 +3,19 @@ header.header
     a(href="#").header__link Subscribe
     a(href="#").header__logo.logo
     .header__right
-      span.header__parent.show-s Brought to you by
+      a(href="http://scoopnewsgroup.com/", target="_blank").header__link.show-s Brought to you by
         i
       #search.header__control
         i.header__control-icon.header__control-icon--search
       #menu.header__control.hide-s
         i.header__control-icon.header__control-icon--menu
   nav.header__nav.nav
-    ul.nav__list
+    ul.nav__list(role="navigation")
       li.nav__item
         a(href="#").nav__link.nav__link--government Government
       li.nav__item
         a(href="#").nav__link.nav__link--transportation Transportation
-      li.nav__item
+      li.nav__item.nav__item--active
         a(href="#").nav__link.nav__link--healthcare Healthcare
       li.nav__item
         a(href="#").nav__link.nav__link--technology Technology
@@ -28,7 +28,4 @@ header.header
       li.nav__item
         a(href="#").nav__link.nav__link--attend Attend
       li.nav__item
-        a(href="#").nav__link Community
-  #search.header__search.search
-    .search__inner
-      input(type="text", name="search", placeholder="Search").search__input
+        a(href="#").nav__link.nav__link--community Community

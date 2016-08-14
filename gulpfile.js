@@ -47,7 +47,8 @@ gulp.task('stylus', function () {
     return gulp.src(sources.stylus)
         .pipe(stylus({
           use: [jeet()],
-          compress: false
+          compress: false,
+          url: 'embedurl'
         }))
         .pipe(postcss(processors))
         .pipe(gulp.dest(destinations.css))
