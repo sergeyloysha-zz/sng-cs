@@ -162,11 +162,11 @@ h5
   +mediaMin(size-m)
     j_center(980px)
 
-.content
-  padding 3% 0
+.articles-wrapper
+  padding 3% 0 0 0
 
   +mediaMin(size-m)
-    padding 3rem 0
+    padding 3rem 0 0 0
 
 .articles
   background color-white
@@ -174,7 +174,6 @@ h5
   box-shadow 0 3px 5px 0 alpha(color-black, 0.3)
   border-top 1rem solid color-black
   border-bottom 0.3rem solid color-black
-  margin 0 0 3% 0
 
   +mediaMin(size-s)
     padding 0
@@ -185,9 +184,6 @@ h5
 
   &--noborder
     border-bottom none
-
-  &--nomargin
-    margin 0
 
   &__list
     cf()
@@ -405,7 +401,6 @@ h5
       color #333
 
 .title
-  font-family 'oswald-web'
   font-weight 700
   font-size 2.4rem
   line-height 2.6rem

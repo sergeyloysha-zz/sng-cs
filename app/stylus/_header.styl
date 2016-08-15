@@ -1,14 +1,10 @@
 .header
   position fixed
   width 100%
-  margin 0 0 3% 0
   z-index 1000
   box-shadow -3px -3px 3px 0 alpha(color-black, .19),
              3px 0 3px 0 alpha(color-black, .19),
              0 3px 3px 0 alpha(color-black, .1)
-
-  +mediaMin(size-m)
-    margin 0 auto 30px auto
 
   &__head
     position relative
@@ -34,7 +30,6 @@
     position relative
     display flex
     align-items center
-    font-family 'firasans-web'
     font-weight 500
     font-size 1.1rem
     line-height 1.4rem
@@ -107,39 +102,43 @@
   height 30px
   background embedurl('../images/logo.svg') center no-repeat
   background-size 100px 26px
-  transform scale(1)
-  transition transform .15s cubic-bezier(.33,.66,.66,1)
+
 
   +mediaMin(size-s)
     width 200px
     height 52px
     background-size 200px 52px
+    transform scale(1)
+    transition transform .15s cubic-bezier(.33,.66,.66,1)
 
     &--small
       transform scale(0.9)
 
 .nav
-  position absolute
+  position fixed
   top 50px
-  width 100%
+  left 0
+  right 0
+  bottom 0
   background color-white
-  max-height 0px
-  overflow hidden
-  transition max-height .15s cubic-bezier(.33,.66,.66,1)
-  overflow-y auto
-
+  opacity 0
+  visibility hidden
+  transition max-height .15s cubic-bezier(.33,.66,.66,1), opacity .25s cubic-bezier(.33,.66,.66,1)
 
   +mediaMin(size-s)
     position relative
     max-height 34px
     top 0
-    overflow-y hidden
+    opacity 1
+    visibility visible
+    overflow hidden
 
-  &--hidden
-    max-height 0px
+    &--hidden
+      max-height 0px
 
   &--opened
-    max-height 340px !important
+    opacity 1
+    visibility visible
 
   &__list
     display flex
@@ -148,17 +147,18 @@
     padding 0
     list-style none
     border-top 1px solid #c6c6c6
-    border-bottom 1px solid #c6c6c6
+    height 100%
 
     +mediaMin(size-s)
       flex-direction row
+      border-bottom 1px solid #c6c6c6
 
   &__item
+    flex-grow 0
+    flex-basis 25%
     border-bottom 1px solid #c6c6c6
 
     +mediaMin(size-s)
-      flex-grow 0
-      flex-basis 25%
       border-right 1px solid #c6c6c6
       border-bottom 0
 
@@ -172,6 +172,9 @@
 
       .nav__link
         color color-white
+
+        &:hover
+          color color-white
 
         &--government
           background color-government
@@ -201,9 +204,9 @@
           background color-community
 
   &__link
-    display block
-    padding 15px 3%
-    text-align center
+    display flex
+    align-items center
+    justify-content center
     font-family 'purista-web'
     font-weight 400
     font-size 1.8rem
@@ -211,46 +214,107 @@
     text-transform uppercase
     color color-black
     transition background .1s cubic-bezier(.33,.66,.66,1), color .15s cubic-bezier(.33,.66,.66,1)
-
-    +mediaMin(size-s)
-      font-size 1.2rem
-      padding 6px 10px
+    height 100%
 
     &:hover
-      color color-white
+      color-white
+
+    &:active
+      color color-white !important
 
     &--government
       &:hover
+        color color-government
+      &:active
         background color-government
 
     &--transportation
       &:hover
+        color color-transportation
+      &:active
         background color-transportation
 
     &--healthcare
       &:hover
+        color color-healthcare
+      &:active
         background color-healthcare
 
     &--technology
       &:hover
+        color color-technology
+      &:active
         background color-technology
 
     &--financial
       &:hover
+        color color-financial
+      &:active
         background color-financial
 
     &--watch
       &:hover
+        color color-watch
+      &:active
         background color-watch
 
     &--listen
       &:hover
+        color color-listen
+      &:active
         background color-listen
 
     &--attend
       &:hover
+        color color-attend
+      &:active
         background color-attend
 
     &--community
       &:hover
+        color color-community
+      &:active
         background color-community
+
+    +mediaMin(size-s)
+      height 3.2rem
+      font-size 1.2rem
+
+      &:hover
+        color color-white
+
+      &--government
+        &:hover
+          background color-government
+
+      &--transportation
+        &:hover
+          background color-transportation
+
+      &--healthcare
+        &:hover
+          background color-healthcare
+
+      &--technology
+        &:hover
+          background color-technology
+
+      &--financial
+        &:hover
+          background color-financial
+
+      &--watch
+        &:hover
+          background color-watch
+
+      &--listen
+        &:hover
+          background color-listen
+
+      &--attend
+        &:hover
+          background color-attend
+
+      &--community
+        &:hover
+          background color-community
