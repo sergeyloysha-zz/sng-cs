@@ -2,9 +2,8 @@
 @import '_normalize'
 @import '_fonts'
 
-font-base = 'firasans-web', Helvetica, Arial, sans-serif
-font-default = 'firasans-web'
-font-condensed = 'oswald-web'
+font-base = 'Fira Sans', Helvetica, Arial, sans-serif
+font-condensed = 'Oswald'
 
 size-font = 1.5rem
 size-line = 2rem
@@ -152,16 +151,22 @@ h5
 .wrapper
   position relative
   //j_center(1200px)
-  padding-top calc(50px + 3%)
+  padding-top 50px
 
   +mediaMin(size-s)
-    padding-top calc(136px)
+    padding-top calc(107px)
 
 .container
   margin 0 3%
 
   +mediaMin(size-m)
     j_center(980px)
+
+.content
+  padding 3% 0
+
+  +mediaMin(size-m)
+    padding 3rem 0
 
 .articles
   background color-white
@@ -215,7 +220,6 @@ h5
     text-transform uppercase
     color color-white
     text-align center
-    font-family 'adellesans-web'
     font-weight 700
     border 3px solid color-pink
     transition background 0.2s, color 0.2s
@@ -420,49 +424,88 @@ h5
     border-bottom 5px solid #000
 
 .page-hero
-  display flex
-  flex-direction column
-  justify-content flex-end
   position relative
   width 100%
-  min-height 25vw
-  background-repeat no-repeat
-  background-position center 70%
-  background-size cover
-  padding 3% 0
-  margin-bottom 3%
 
-  +mediaMin(size-m)
-    margin 0 0 30px 0
-    padding 30px 0
+  &__media
+    width: 100%
+    padding-bottom 60%
+    overflow hidden
+    background-repeat no-repeat
+    background-position center
+    background-size cover
 
-  &:before
-    content ' '
+    +mediaMin(size-s)
+      padding-bottom 50%
+
+    +mediaMin(size-m)
+      padding-bottom 30%
+
+    &:before
+      position absolute
+      content ' '
+      top 0
+      left 0
+      width 100%
+      height 100%
+      background alpha(color-black, 0.15)
+
+  &__wrapper
+    width 100%
+    height 100%
+    background #202020
+    overflow hidden
+
+    +mediaMin(size-s)
+      position absolute
+      top 0
+      left 0
+      z-index 10
+      background transparent
+
+
+  &__container
+    position relative
+    display table
+    height 100%
+
+  &__info
+    display table-cell
+    padding 5% 0
+    height 100%
+    vertical-align bottom
+    color color-white
+    text-shadow 1px 1px 1px alpha(color-black, 0.75)
+
+    +mediaMin(size-s)
+      padding 0 0 5rem 0
+
+  &__link
+    display block
     position absolute
     top 0
-    right 0
-    bottom 0
     left 0
-    background alpha(color-black, 0.3)
-    transition background 0.2s
-
-  &__inner
-    position relative
+    width 100%
+    height 100%
 
   &__title
-    margin 0 0 3% 0
-    color color-white
+    width 100%
 
     +mediaMin(size-m)
-      margin 0 0 30px 0
+      max-width 80%
+
 
   &__text
+    width 100%
     margin 0
-    font-weight 700
-    color color-white
+
+    +mediaMin(size-s)
+      font-size 1.8rem
+      line-height 2.6rem
+      font-weight 700
 
     +mediaMin(size-m)
-      font-size 1.8rem
+      max-width 70%
 
 
 .featured-video
