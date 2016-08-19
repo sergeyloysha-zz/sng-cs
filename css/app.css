@@ -532,6 +532,11 @@ h5,
             flex-direction: row;
     border-top: 1px solid #c6c6c6;
     border-bottom: 1px solid #c6c6c6;
+    min-height: inherit;
+    height: auto;
+    -webkit-justify-content: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
   }
 }
 @media screen and (min-width: 768px) {
