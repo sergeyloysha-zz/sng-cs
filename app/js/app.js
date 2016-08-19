@@ -56,6 +56,7 @@ $(function() {
     e.preventDefault();
     $(this).toggleClass('header__control--opened');
     $('.nav').toggleClass('nav--opened');
+    $('html').toggleClass('noscroll');
   });
 
   var slider = $('.watch-landing__list').lightSlider({
