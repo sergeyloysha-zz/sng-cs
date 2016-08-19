@@ -586,7 +586,7 @@ h5,
   letter-spacing: 0.08rem;
   text-transform: uppercase;
   color: #000;
-  transition: background 0.1s cubic-bezier(0.33, 0.66, 0.66, 1), color 0.15s cubic-bezier(0.33, 0.66, 0.66, 1);
+  transition: background 0.1s cubic-bezier(0.33, 0.66, 0.66, 1), color cubic-bezier(0.33, 0.66, 0.66, 1);
 }
 @media screen and (min-width: 768px) {
   .nav__link {
