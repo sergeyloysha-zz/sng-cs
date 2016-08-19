@@ -598,56 +598,29 @@ h5,
 .nav__link:hover {
   color: #fff !important;
 }
-.nav__link--government {
-  color: #330047;
-}
 .nav__link--government:hover {
   background: #330047;
-}
-.nav__link--transportation {
-  color: #002e4a;
 }
 .nav__link--transportation:hover {
   background: #002e4a;
 }
-.nav__link--healthcare {
-  color: #0a2239;
-}
 .nav__link--healthcare:hover {
   background: #0a2239;
-}
-.nav__link--technology {
-  color: #42467c;
 }
 .nav__link--technology:hover {
   background: #42467c;
 }
-.nav__link--financial {
-  color: #426f73;
-}
 .nav__link--financial:hover {
   background: #426f73;
-}
-.nav__link--watch {
-  color: #5c707c;
 }
 .nav__link--watch:hover {
   background: #5c707c;
 }
-.nav__link--listen {
-  color: #1e5f4c;
-}
 .nav__link--listen:hover {
   background: #1e5f4c;
 }
-.nav__link--attend {
-  color: #054a29;
-}
 .nav__link--attend:hover {
   background: #054a29;
-}
-.nav__link--community {
-  color: #132e32;
 }
 .nav__link--community:hover {
   background: #132e32;
