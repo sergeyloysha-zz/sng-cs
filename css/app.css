@@ -352,7 +352,7 @@ h5,
 }
 @media screen and (min-width: 768px) {
   .header__head {
-    padding: 15px 30px;
+    padding: 12px 30px;
     box-shadow: none;
   }
 }
@@ -385,10 +385,10 @@ h5,
 }
 .header__link i {
   display: block;
-  width: 50px;
-  height: 43px;
+  width: 60px;
+  height: 52px;
   background: url("../images/logo-sng.png") center no-repeat;
-  background-size: 50px 43px;
+  background-size: 60px 52px;
   margin: 0 0 0 10px;
 }
 .header__logo {
@@ -782,6 +782,14 @@ h5,
     display: inherit;
   }
 }
+.show-m {
+  display: none;
+}
+@media screen and (min-width: 1060px) {
+  .show-m {
+    display: inherit;
+  }
+}
 .hide-s {
   display: inherit;
 }
@@ -814,11 +822,13 @@ h5,
     padding-right: 0;
   }
 }
-.articles-wrapper {
+.articles-wrapper,
+.content-wrapper {
   padding: 3% 0 0 0;
 }
 @media screen and (min-width: 1060px) {
-  .articles-wrapper {
+  .articles-wrapper,
+  .content-wrapper {
     padding: 3rem 0 0 0;
   }
 }
@@ -990,6 +1000,13 @@ h5,
     height: 80px;
   }
 }
+@media screen and (min-width: 768px) {
+  .article-thumb--line {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 .article-thumb__image {
   position: relative;
   display: block;
@@ -1029,6 +1046,15 @@ h5,
     width: 65.66666666666666%;
     margin-left: 0;
     margin-right: 3%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .article-thumb__information--line:last-child {
     margin-right: 0;
@@ -1163,15 +1189,15 @@ h5,
   margin: 0 0 3% 0;
   text-transform: uppercase;
 }
-.title--normal {
-  text-transform: none;
-}
 @media screen and (min-width: 768px) {
   .title {
     font-size: 3.7rem;
     line-height: 4rem;
     border-bottom: 5px solid #000;
   }
+}
+.title--normal {
+  text-transform: initial;
 }
 .page-hero {
   position: relative;
@@ -2135,7 +2161,7 @@ h5,
   position: relative;
   float: left;
   width: 50%;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 @media screen and (min-width: 768px) {
   .people {
@@ -2144,9 +2170,9 @@ h5,
 }
 .people__link {
   position: relative;
-  transition: box-shadow 0.2s cubic-bezier(0.33, 0.66, 0.66, 1);
+  transition: box-shadow 0.15s cubic-bezier(0.33, 0.66, 0.66, 1);
   cursor: pointer;
-  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.4);
+  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.4);
 }
 .people__link:hover {
   box-shadow: 0 5px 15px 0 rgba(0,0,0,0.5);
