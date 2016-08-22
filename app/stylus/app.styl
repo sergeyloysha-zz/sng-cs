@@ -146,6 +146,11 @@ h5
   +mediaMin(size-s)
     display inherit
 
+.show-m
+  display none
+  +mediaMin(size-m)
+    display inherit
+
 .hide-s
   display inherit
   +mediaMin(size-s)
@@ -166,6 +171,7 @@ h5
     j_center(980px)
 
 .articles-wrapper
+.content-wrapper
   padding 3% 0 0 0
 
   +mediaMin(size-m)
@@ -283,6 +289,10 @@ h5
       .article-thumb__short
         height 80px
 
+  &--line
+    +mediaMin(size-s)
+      display flex
+
   &__image
     position relative
     display block
@@ -312,6 +322,9 @@ h5
     &--line
       +mediaMin(size-s)
         col(2/3)
+        display flex
+        flex-direction column
+        justify-content center
 
   &__category
     margin 10px 0
@@ -429,13 +442,13 @@ h5
   margin 0 0 3% 0
   text-transform uppercase
 
-  &--normal
-    text-transform none
-
   +mediaMin(size-s)
     font-size 3.7rem
     line-height 4rem
     border-bottom 5px solid #000
+
+  &--normal
+    text-transform initial
 
 .page-hero
   position relative
@@ -1162,16 +1175,16 @@ h5
   position relative
   float left
   width 50%
-  padding 1rem
+  padding 0.5rem
 
   +mediaMin(size-s)
     width 16.6666667%
 
   &__link
     position relative
-    transition box-shadow 0.2s trs-function
+    transition box-shadow .15s trs-function
     cursor pointer
-    box-shadow 0 5px 10px 0 alpha(color-black, 0.4)
+    box-shadow 0 3px 8px 0 alpha(color-black, 0.4)
 
     &:hover
       box-shadow 0 5px 15px 0 alpha(color-black, 0.5)
