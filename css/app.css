@@ -325,14 +325,8 @@ h5,
 .header {
   position: fixed;
   width: 100%;
-  margin: 0 0 3% 0;
   z-index: 1000;
   box-shadow: -3px -3px 3px 0 rgba(0,0,0,0.19), 3px 0 3px 0 rgba(0,0,0,0.19), 0 3px 3px 0 rgba(0,0,0,0.1);
-}
-@media screen and (min-width: 1060px) {
-  .header {
-    margin: 0 auto 30px auto;
-  }
 }
 .header__head {
   position: relative;
@@ -804,7 +798,7 @@ h5,
 }
 @media screen and (min-width: 768px) {
   .wrapper {
-    padding-top: calc(107px);
+    padding-top: 110px;
   }
 }
 .container {
@@ -2354,6 +2348,7 @@ h5,
           flex: 1;
   min-width: 50px;
   padding: 10px;
+  border-radius: 0;
   border: 0;
   font-size: 2rem;
   line-height: 2rem;
@@ -2362,6 +2357,7 @@ h5,
 .subscribe__button {
   display: block;
   background: #ed2a7a;
+  border-radius: 0;
   border: 0;
   padding: 12px 15px 8px 15px;
   font-weight: 500;
