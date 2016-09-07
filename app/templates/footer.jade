@@ -1,38 +1,30 @@
 footer.footer
+  .footer__nav
+    .container
+      .footer__nav-inner
+        ul.footer-nav__list
+          li.footer-nav__item
+            a.footer-nav__link(href="#") About
+          li.footer-nav__item
+            a.footer-nav__link(href="#") Sponsor
+          li.footer-nav__item
+            a.footer-nav__link(href="#") RSS
+        ul.footer-social__list
+          li.footer-social__item
+            a.footer-social__link.footer-social__link--facebook(href="#")
+          li.footer-social__item
+            a.footer-social__link.footer-social__link--twitter(href="#")
+          li.footer-social__item
+            a.footer-social__link.footer-social__link--linkedin(href="#")
   .container.footer__inner
-    .footer__top
-      .footer__copy
-        .footer__copy-logo CyberScoop
-        span.footer__copy-text © 2016 Scoop News Group <br/> All Rights Reserved
-        a.footer__copy-link RSS
-      .footer__subscribe.subscribe
-        .subscribe__title The best cybersecurity news, delivered straight to your inbox. Sign up for our daily newsletter.
-        form(action="#", method="post").subscribe__form
-          input(type="text", name="name", placeholder="Enter your email adress").subscribe__input
-          input(type="submit", name="name", value="GO").subscribe__button
-        span.subscribe__additional By signing up, you agree to our 
-          a(href="#") services terms.         
-          
-      ul.footer__links-list
-        li.footer__links-item
-          a.footer__links-link About Us
-        li.footer__links-item
-          a.footer__links-link Watch
-        li.footer__links-item
-          a.footer__links-link Listen
-        li.footer__links-item
-          a.footer__links-link Attend
-        li.footer__links-item
-          a.footer__links-link Sponsor
-        li.footer__links-item
-          a.footer__links-link Contact
     .footer__bottom
       .sng
-        a.sng__link.sng__link--cyberscoop
-        a.sng__link.sng__link--edscoop
-        a.sng__link.sng__link--sng
-        a.sng__link.sng__link--fedscoop
-        a.sng__link.sng__link--statescoop
+        a.sng__link.sng__link--cyberscoop(href="#")
+        a.sng__link.sng__link--edscoop(href="#")
+        a.sng__link.sng__link--sng(href="#")
+        a.sng__link.sng__link--fedscoop(href="#")
+        a.sng__link.sng__link--statescoop(href="#")
+    .footer__copyright © 2016 Scoop News Group  |  All Rights Reserved
 .overlay-search
   form(method="post", action="/",role="search").overlay-search-form
     input(name="search" placeholder="Type to search").overlay-search-input
