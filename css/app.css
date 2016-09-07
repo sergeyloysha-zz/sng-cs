@@ -2486,3 +2486,159 @@ h5,
   font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
   color: #fff;
 }
+.contacts-hero {
+  position: relative;
+  width: 100%;
+}
+.contacts-hero__media {
+  width: 100%;
+  padding-bottom: 50%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (min-width: 768px) {
+  .contacts-hero__media {
+    padding-bottom: 40%;
+  }
+}
+@media screen and (min-width: 1060px) {
+  .contacts-hero__media {
+    padding-bottom: 25%;
+  }
+}
+.contacts-brands {
+  padding: 3% 0;
+}
+@media screen and (min-width: 1060px) {
+  .contacts-brands {
+    padding: 5rem 0 0 0;
+  }
+}
+.contacts-brands__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  *zoom: 1;
+}
+.contacts-brands__list:before,
+.contacts-brands__list:after {
+  content: '';
+  display: table;
+}
+.contacts-brands__list:after {
+  clear: both;
+}
+@media screen and (min-width: 768px) {
+  .contacts-brands__list {
+    margin: 0 -1.5rem;
+  }
+}
+.contacts-brands__item {
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .contacts-brands__item {
+    width: 50%;
+    padding: 0 1.5rem;
+    float: left;
+    margin-bottom: 5rem;
+  }
+}
+.contacts-brand__logo {
+  width: 100%;
+  height: auto;
+  margin: 0 0 1.5% 0;
+}
+@media screen and (min-width: 1060px) {
+  .contacts-brand__logo {
+    margin: 0 0 1.5rem 0;
+  }
+}
+.contacts-brand__logo_cyberscoop {
+  max-width: 15.5rem;
+}
+@media screen and (min-width: 768px) {
+  .contacts-brand__logo_cyberscoop {
+    max-width: 31.1rem;
+  }
+}
+.contacts-brand__logo_fedscoop {
+  max-width: 12.4rem;
+}
+@media screen and (min-width: 768px) {
+  .contacts-brand__logo_fedscoop {
+    max-width: 24.8rem;
+  }
+}
+.contacts-brand__logo_edscoop {
+  max-width: 11.1rem;
+}
+@media screen and (min-width: 768px) {
+  .contacts-brand__logo_edscoop {
+    max-width: 22.2rem;
+  }
+}
+.contacts-brand__logo_statescoop {
+  max-width: 16.2rem;
+}
+@media screen and (min-width: 768px) {
+  .contacts-brand__logo_statescoop {
+    max-width: 32.4rem;
+  }
+}
+.contacts-brand__description {
+  color: #363636;
+  margin: 0 0 2rem 0;
+}
+@media screen and (min-width: 768px) {
+  .contacts-brand__description {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+}
+@media screen and (min-width: 1060px) {
+  .contacts-brand__description {
+    margin: 0 0 3rem 0;
+  }
+}
+.contacts-brand__link {
+  display: block;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: #ee2a7b;
+  font-weight: 300;
+  padding: 0 0 0 4rem;
+  margin: 0 0 1rem 0;
+  opacity: 1;
+  transition: opacity 0.15 ease-out;
+  background-size: 50%;
+}
+@media screen and (min-width: 768px) {
+  .contacts-brand__link {
+    font-size: 2.8rem;
+    line-height: 3.4rem;
+  }
+}
+.contacts-brand__link:hover {
+  opacity: 0.8;
+}
+.contacts-brand__link_phone {
+  background: url("../images/icons/phone_icon.png") left center no-repeat;
+  background-size: 25px 24px;
+}
+@media screen and (min-width: 768px) {
+  .contacts-brand__link_phone {
+    background-size: 33px 32px;
+  }
+}
+.contacts-brand__link_email {
+  background: url("../images/icons/email_icon.png") left center no-repeat;
+  background-size: 25px 18px;
+}
+@media screen and (min-width: 768px) {
+  .contacts-brand__link_email {
+    background-size: 31px 22px;
+  }
+}
