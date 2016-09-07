@@ -1478,3 +1478,117 @@ h5
   &__bottom
     font-family font-base
     color color-white
+
+.contacts-hero
+  position relative
+  width 100%
+
+  &__media
+    width: 100%
+    padding-bottom 50%
+    overflow hidden
+    background-repeat no-repeat
+    background-position center
+    background-size cover
+
+    +mediaMin(size-s)
+      padding-bottom 40%
+
+    +mediaMin(size-m)
+      padding-bottom 25%
+
+.contacts-brands
+  padding 3% 0
+
+  +mediaMin(size-m)
+    padding 5rem 0 0 0
+
+  &__list
+    margin 0
+    padding 0
+    list-style none
+    cf()
+
+    +mediaMin(size-s)
+      margin 0 -1.5rem
+
+  &__item
+    margin-bottom 3rem
+    +mediaMin(size-s)
+      width 50%
+      padding 0 1.5rem
+      float left
+      margin-bottom 5rem
+
+.contacts-brand
+  &__logo
+    width 100%
+    height auto
+    margin 0 0 1.5% 0
+
+    +mediaMin(size-m)
+      margin 0 0 1.5rem 0
+
+    &_cyberscoop
+      max-width 15.5rem
+
+      +mediaMin(size-s)
+        max-width 31.1rem
+    &_fedscoop
+      max-width 12.4rem
+
+      +mediaMin(size-s)
+        max-width 24.8rem
+    &_edscoop
+      max-width 11.1rem
+
+      +mediaMin(size-s)
+        max-width 22.2rem
+    &_statescoop
+      max-width 16.2rem
+      +mediaMin(size-s)
+        max-width 32.4rem
+
+  &__description
+    color #363636
+    margin 0 0 2rem 0
+
+    +mediaMin(size-s)
+      font-size 2rem
+      line-height 2.8rem
+
+    +mediaMin(size-m)
+      margin 0 0 3rem 0
+
+  &__link
+    display block
+    font-size 1.8rem
+    line-height 2.4rem
+    color #ee2a7b
+    font-weight 300
+    padding 0 0 0 4rem
+    margin 0 0 1rem 0
+    opacity 1
+    transition opacity .15 ease-out
+    background-size 50%
+
+    +mediaMin(size-s)
+      font-size 2.8rem
+      line-height 3.4rem
+
+    &:hover
+      opacity 0.8
+
+    &_phone
+      background url('../images/icons/phone_icon.png') left center no-repeat
+      background-size 25px 24px
+
+      +mediaMin(size-s)
+        background-size 33px 32px
+
+    &_email
+      background url('../images/icons/email_icon.png') left center no-repeat
+      background-size 25px 18px
+
+      +mediaMin(size-s)
+        background-size 31px 22px

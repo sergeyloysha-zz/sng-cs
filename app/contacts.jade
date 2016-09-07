@@ -1,0 +1,43 @@
+extends templates/base
+
+block content
+  include templates/header
+  .wrapper
+    section.contacts-hero
+      .contacts-hero__media(style={'background-image': 'url(images/SNG_lobby.png)'})
+      
+    section.content
+      .container
+        .contacts-wrapper
+          .contacts-brands
+            h2.contacts-brands__title.title Our brands
+            ul.contacts-brands__list
+              li.contacts-brands__item
+                .contacts-brand
+                  .contacts-brand__brand
+                    img.contacts-brand__logo.contacts-brand__logo_cyberscoop(src='images/CyberScoop-RGB-Color.png')
+                  p.contacts-brand__description CyberScoop is the leading public sector media company reaching top cybersecurity leaders both online and in-person through breaking news, newsletters, events, radio and TV. With over 200,000 subscribers CyberScoop will connect you to your target audience of cybersecurity decison makers and influencers.
+                  a.contacts-brand__link.contacts-brand__link_phone(href="tel:(282) 887-8001", target="_blank") (282) 887-8001
+                  a.contacts-brand__link.contacts-brand__link_email(href="mailto:hello@cyberscoop.com", target="_blank") hello@cyberscoop.com
+              li.contacts-brands__item
+                .contacts-brand
+                  .contacts-brand__brand
+                    img.contacts-brand__logo.contacts-brand__logo_fedscoop(src='images/FedScoop-RGB-Color.png')
+                  p.contacts-brand__description FedScoop is the leading federal tech media company in DC and the community’s platform for education and collaboration through news, events, radio and TV. FedScoop gathers top leaders from The White House, federal agencies, academia and the tech industry to discuss ways technology can improve government and identify ways to
+                  a.contacts-brand__link.contacts-brand__link_phone(href="tel:(282) 887-8001", target="_blank") (282) 887-8001
+                  a.contacts-brand__link.contacts-brand__link_email(href="mailto:hello@cyberscoop.com", target="_blank") hello@cyberscoop.com
+              li.contacts-brands__item
+                .contacts-brand
+                  .contacts-brand__brand
+                    img.contacts-brand__logo.contacts-brand__logo_edscoop(src='images/EdScoop-RGB-Color.png')
+                  p.contacts-brand__description EdScoop features the latest news and conversations among top leaders driving technology and digital learning in K-12 and higher education.<br/>We attract influential IT policy and decisions makers at the federal, state and local education levels.<br/><br/>
+                  a.contacts-brand__link.contacts-brand__link_phone(href="tel:(282) 887-8001", target="_blank") (282) 887-8001
+                  a.contacts-brand__link.contacts-brand__link_email(href="mailto:hello@cyberscoop.com", target="_blank") hello@cyberscoop.com
+              li.contacts-brands__item
+                .contacts-brand
+                  .contacts-brand__brand
+                    img.contacts-brand__logo.contacts-brand__logo_statescoop(src='images/StateScoop-RGB-Color.png')
+                  p.contacts-brand__description StateScoop reports on news and events impacting technology decisions in state and local government. We feature IT leaders and innovators from across government, academia and the industry to exchange best practices and identify ways to improve state and local government.
+                  a.contacts-brand__link.contacts-brand__link_phone(href="tel:(282) 887-8001", target="_blank") (282) 887-8001
+                  a.contacts-brand__link.contacts-brand__link_email(href="mailto:hello@cyberscoop.com", target="_blank") hello@cyberscoop.com
+  include templates/footer
