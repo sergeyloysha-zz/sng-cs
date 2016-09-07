@@ -172,10 +172,10 @@ h5
 
 .articles-wrapper
 .content-wrapper
-  padding 3% 0 0 0
+  padding 3% 0
 
   +mediaMin(size-m)
-    padding 3rem 0 0 0
+    padding 3rem 0
 
 .articles
   background color-white
@@ -196,7 +196,10 @@ h5
 
   &__list
     cf()
-    margin 0 -1.5%
+
+    &--home
+      +mediaMin(size-s)
+        margin 0 -1.5%
 
   &__item
     margin 3% 0
@@ -325,6 +328,10 @@ h5
         display flex
         flex-direction column
         justify-content center
+
+      .article-thumb__category
+        +mediaMin(size-s)
+          margin 0
 
   &__category
     margin 10px 0
@@ -591,10 +598,10 @@ h5
   display block
 
   &--full
-    margin 3% 0
+    margin 0 0 3% 0
 
     +mediaMin(size-m)
-      margin 30px 0
+      margin 0 0 30px 0
 
   &__element
     display block
@@ -792,7 +799,7 @@ h5
 .related-news
   margin 3% 0
   +mediaMin(size-s)
-    margin 0
+    margin 0 0 3rem 0
     padding 50px 0 20px 0
     background #f4f4f4
 
@@ -1592,3 +1599,91 @@ h5
 
       +mediaMin(size-s)
         background-size 31px 22px
+
+.author-intro
+  border-bottom 7px solid #efefef
+  padding 2rem 0
+  margin-bottom 1rem
+  color #4c4c4c
+
+  +mediaMin(size-s)
+    padding 4rem 0
+    margin-bottom 2rem
+    font-size 2rem
+    line-height 2.8rem
+
+.author
+  padding 3rem 0 2rem 0
+  background-size cover
+  background-repeat no-repeat
+
+  +mediaMin(size-s)
+    padding 5rem 0
+
+  &__inner
+    text-align center
+
+  &__photo
+    display inline-block
+    width 20rem
+    height 20rem
+    background url('../images/author-noimage.png') center no-repeat
+    border-radius 50%
+    border 5px solid #b8b7b7
+
+    +mediaMin(size-s)
+      width 27rem
+      height 27rem
+
+  &__image
+    position relative
+    top -0.1rem
+    left -0.1rem
+    display block
+    width 19.2rem
+    height 19.2rem
+    border-radius 50%
+    border 0
+
+    +mediaMin(size-s)
+      width 26.2rem
+      height 26.2rem
+
+  &__name
+    font-family font-condensed
+    font-weight 300
+    text-transform uppercase
+    color color-white
+    margin 2rem 0 1rem 0
+
+    +mediaMin(size-s)
+      font-size 4rem
+      line-height 4.8rem
+
+  &__position
+    font-family font-base
+    font-weight 400
+    color #c8c8c8
+    margin 1rem 0
+
+    +mediaMin(size-s)
+      font-size 3rem
+      line-height 3.8rem
+
+  &__links
+    display inline-block
+
+  &__link
+    display inline-block
+    width 5rem
+    height 5rem
+    display inline-block
+    background-repeat no-repeat
+    background-position center
+    margin 0 1rem
+
+    &--twitter
+      background-image url('../images/icons/twitter_w_icon.png')
+
+    &--email
+      background-image url('../images/icons/email_w_icon.png')
