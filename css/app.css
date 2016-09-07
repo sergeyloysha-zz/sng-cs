@@ -635,57 +635,7 @@ h5,
   color: #fff;
 }
 .footer__inner {
-  padding: 30px 0;
-}
-.footer__top {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 3%;
-}
-.footer__links-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.footer__links-item {
-  margin: 0 0 5px 0;
-}
-.footer__links-link {
-  font-size: 2rem;
-  cursor: pointer;
-  transition: color 0.2s;
-}
-.footer__links-link:hover {
-  color: #ed2a7a;
-}
-.footer__copy-logo {
-  font-family: 'Oswald';
-  font-weight: 400;
-  font-size: 2rem;
-  margin: 0 0 10px 0;
-}
-.footer__copy-text {
-  display: block;
-}
-.footer__copy-link {
-  display: inline-block;
-  cursor: pointer;
-}
-.footer__copy-link:hover {
-  text-decoration: underline;
-}
-.footer__subscribe {
-  display: none;
-  width: 50%;
-}
-@media screen and (min-width: 768px) {
-  .footer__subscribe {
-    display: block;
-  }
+  padding: 2rem 0;
 }
 .footer__bottom {
   display: none;
@@ -693,6 +643,114 @@ h5,
 @media screen and (min-width: 1060px) {
   .footer__bottom {
     display: block;
+  }
+}
+.footer__nav {
+  background: #ee2a7b;
+  padding: 0.8rem 0;
+}
+.footer__nav-inner {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .footer__nav-inner {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+.footer-nav__list {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer-nav__item {
+  margin-right: 2rem;
+  padding-right: 2rem;
+  border-right: 1px solid rgba(255,255,255,0.5);
+}
+.footer-nav__item:last-child {
+  margin-right: 0;
+  padding-right: 0;
+  border-right: 0;
+}
+.footer-nav__link {
+  position: relative;
+  top: 0.2rem;
+  display: inline-block;
+  font-size: 2rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 1;
+  transition: opacity 0.15s ease-out;
+}
+.footer-nav__link:hover {
+  opacity: 0.8;
+}
+.footer-social__list {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+@media screen and (min-width: 768px) {
+  .footer-social__list {
+    margin: 0 0 0 auto;
+  }
+}
+.footer-social__item {
+  margin-left: 2rem;
+}
+.footer-social__item:first-child {
+  margin-left: 0;
+}
+.footer-social__link {
+  display: block;
+  width: 2.7rem;
+  height: 2.7rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1;
+  transition: opacity 0.15s ease-out;
+}
+.footer-social__link:hover {
+  opacity: 0.8;
+}
+.footer-social__link--twitter {
+  background-image: url("../images/icons/twitter_logo_white.png");
+}
+.footer-social__link--facebook {
+  background-image: url("../images/icons/facebook_logo_white.png");
+}
+.footer-social__link--linkedin {
+  background-image: url("../images/icons/linkedin_logo_white.png");
+}
+.footer__copyright {
+  display: block;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #fff;
+}
+@media screen and (min-width: 1060px) {
+  .footer__copyright {
+    margin: 1rem 0 0 0;
   }
 }
 .overlay-search {
@@ -2260,10 +2318,10 @@ h5,
   background-size: 128px 50px;
 }
 .sng__link--sng {
-  width: 80px;
-  height: 68px;
+  width: 120px;
+  height: 102px;
   background: url("../images/sng-sng.png") center no-repeat;
-  background-size: 80px 68px;
+  background-size: 120px 102px;
 }
 .sng__link--fedscoop {
   width: 146px;
@@ -2744,6 +2802,11 @@ h5,
   background-repeat: no-repeat;
   background-position: center;
   margin: 0 1rem;
+  opacity: 1;
+  transition: opacity 0.15s ease-out;
+}
+.author__link:hover {
+  opacity: 0.8;
 }
 .author__link--twitter {
   background-image: url("../images/icons/twitter_w_icon.png");
