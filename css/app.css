@@ -2587,20 +2587,22 @@ h5,
   margin: 0;
   padding: 0;
   list-style: none;
-  *zoom: 1;
-}
-.contacts-brands__list:before,
-.contacts-brands__list:after {
-  content: '';
-  display: table;
-}
-.contacts-brands__list:after {
-  clear: both;
 }
 @media screen and (min-width: 768px) {
   .contacts-brands__list {
     margin: 0 -1.5rem;
   }
+}
+.contacts-brands__row {
+  *zoom: 1;
+}
+.contacts-brands__row:before,
+.contacts-brands__row:after {
+  content: '';
+  display: table;
+}
+.contacts-brands__row:after {
+  clear: both;
 }
 .contacts-brands__item {
   margin-bottom: 3rem;
