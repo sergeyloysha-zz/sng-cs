@@ -147,12 +147,17 @@
     background color-white
 
   &--hidden
-    max-height 0px
+    +mediaMin(size-s)
+      max-height 0px
 
   &--opened
     opacity 0.9
     visibility visible
     overflow-y auto
+
+    +mediaMin(size-s)
+      opacity 1
+      overflow hidden
 
 
   &__list
