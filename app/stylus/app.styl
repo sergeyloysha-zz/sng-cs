@@ -543,9 +543,7 @@ h5
 
 
 .featured-video
-  display none
-  flex-direction column
-  justify-content flex-end
+  display block
   position relative
   width 100%
   background-repeat no-repeat
@@ -553,16 +551,10 @@ h5
   background-size cover
   cursor default
 
-  +mediaMin(size-s)
-    display flex
-    height 350px
-
-  +mediaMin(size-m)
-    height 470px
-
   &__wrapper
     position relative
-    height 470px
+    padding-bottom 56.25%
+    height 0
 
     iframe
       position absolute
@@ -573,21 +565,24 @@ h5
 
 
   &__inner
-    position absolute
-    width 100%
-    left 0
-    right 0
-    bottom 0
+
+    +mediaMin(size-s)
+      position absolute
+      width 100%
+      left 0
+      right 0
+      bottom 0
 
   &__text
+    padding 3%
+    font-weight 700
+    color color-white
+    text-align center
+    background color-black
+
     +mediaMin(size-s)
-      padding 3% 0
-      font-weight 700
       font-size 1.8rem
       line-height 2.2rem
-      color color-white
-      text-align center
-      background color-black
 
     +mediaMin(size-m)
       padding 30px 0
