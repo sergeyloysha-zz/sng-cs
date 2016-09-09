@@ -506,13 +506,21 @@ h5,
     background: #fff;
   }
 }
-.nav--hidden {
-  max-height: 0px;
+@media screen and (min-width: 768px) {
+  .nav--hidden {
+    max-height: 0px;
+  }
 }
 .nav--opened {
   opacity: 0.9;
   visibility: visible;
   overflow-y: auto;
+}
+@media screen and (min-width: 768px) {
+  .nav--opened {
+    opacity: 1;
+    overflow: hidden;
+  }
 }
 .nav__list {
   display: -webkit-flex;
