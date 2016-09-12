@@ -929,9 +929,24 @@ h5
         +mediaMin(size-m)
           margin 30px 0
 
+      a
+        display inline-block
+        line-height 1
+        color color-pink
+        border-bottom 1px solid alpha(color-pink, .2)
+        transition border-bottom .15s ease-out
+
+        &:hover
+          border-bottom 1px solid alpha(color-pink, .8)
+
   &__author
     display inline-block
     margin 0 3% 0 0
+    color color-main
+    transition color .15s ease-out
+
+    &:hover
+      color color-pink
 
     +mediaMin(size-s)
       display block
@@ -1696,3 +1711,19 @@ h5
 
     &--email
       background-image url('../images/icons/email_w_icon.png')
+
+.wp-caption
+  margin 0 3rem
+
+  .size-full
+  .size-large
+    display block
+    width 100%
+    height auto
+    margin 0 !important
+
+  &-text
+    width 100%
+    text-align center
+    color #989797
+    margin 1rem 0 0 0
