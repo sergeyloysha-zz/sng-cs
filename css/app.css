@@ -945,6 +945,12 @@ h5,
     margin: 0 -1.5%;
   }
 }
+@media screen and (min-width: 768px) {
+  .articles__list--home .ads--full {
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+  }
+}
 .articles__item {
   margin: 3% 0;
 }
@@ -1520,6 +1526,7 @@ h5,
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  border: 1px solid #d3d3d3;
 }
 @media screen and (min-width: 768px) {
   .event__image {
