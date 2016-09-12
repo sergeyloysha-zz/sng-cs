@@ -1881,9 +1881,24 @@ h5,
     margin: 30px 0;
   }
 }
+.article__content-text a {
+  display: inline-block;
+  line-height: 1;
+  color: #ed2a7a;
+  border-bottom: 1px solid rgba(237,42,122,0.2);
+  transition: border-bottom 0.15s ease-out;
+}
+.article__content-text a:hover {
+  border-bottom: 1px solid rgba(237,42,122,0.8);
+}
 .article__author {
   display: inline-block;
   margin: 0 3% 0 0;
+  color: #000;
+  transition: color 0.15s ease-out;
+}
+.article__author:hover {
+  color: #ed2a7a;
 }
 @media screen and (min-width: 768px) {
   .article__author {
@@ -2832,4 +2847,20 @@ h5,
 }
 .author__link--email {
   background-image: url("../images/icons/email_w_icon.png");
+}
+.wp-caption {
+  margin: 0 3rem;
+}
+.wp-caption .size-full,
+.wp-caption .size-large {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 !important;
+}
+.wp-caption-text {
+  width: 100%;
+  text-align: center;
+  color: #989797;
+  margin: 1rem 0 0 0;
 }
