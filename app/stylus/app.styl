@@ -2,6 +2,280 @@
 @import '_normalize'
 @import '_fonts'
 
+/* ==========================================================================
+   Remodal's necessary styles
+   ========================================================================== */
+
+/* Hide scroll bar */
+
+html.remodal-is-locked {
+  overflow: hidden;
+
+  touch-action: none;
+}
+
+/* Anti FOUC */
+
+.remodal,
+[data-remodal-id] {
+  display: none;
+}
+
+/* Necessary styles of the overlay */
+
+.remodal-overlay {
+  position: fixed;
+  z-index: 9999;
+  top: -5000px;
+  right: -5000px;
+  bottom: -5000px;
+  left: -5000px;
+
+  display: none;
+}
+
+.remodal-content {
+  text-align: left;
+}
+
+/* Necessary styles of the wrapper */
+
+.remodal-wrapper {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: none;
+  overflow: auto;
+
+  text-align: center;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.remodal-wrapper:after {
+  display: inline-block;
+
+  height: 100%;
+  margin-left: -0.05em;
+
+  content: "";
+}
+
+/* Fix iPad, iPhone glitches */
+
+.remodal-overlay,
+.remodal-wrapper {
+  backface-visibility: hidden;
+}
+
+/* Necessary styles of the modal dialog */
+
+.remodal {
+  position: relative;
+
+  outline: none;
+
+  text-size-adjust: 100%;
+}
+
+.remodal-is-initialized {
+  /* Disable Anti-FOUC */
+  display: inline-block;
+}
+
+/* ==========================================================================
+   Remodal's default mobile first theme
+   ========================================================================== */
+
+/* Default theme styles for the background */
+
+.remodal-bg.remodal-is-opening,
+.remodal-bg.remodal-is-opened {
+  filter: blur(3px);
+}
+
+/* Default theme styles of the overlay */
+
+.remodal-overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.remodal-overlay.remodal-is-opening,
+.remodal-overlay.remodal-is-closing {
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.remodal-overlay.remodal-is-opening {
+  animation-name: remodal-overlay-opening-keyframes;
+}
+
+.remodal-overlay.remodal-is-closing {
+  animation-name: remodal-overlay-closing-keyframes;
+}
+
+/* Default theme styles of the wrapper */
+
+.remodal-wrapper {
+  padding: 10px 10px 0;
+}
+
+/* Default theme styles of the modal dialog */
+
+.remodal {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 35px;
+
+  transform: translate3d(0, 0, 0);
+
+  color: #fff;
+  background: #000;
+}
+
+.remodal.remodal-is-opening,
+.remodal.remodal-is-closing {
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.remodal.remodal-is-opening {
+  animation-name: remodal-opening-keyframes;
+}
+
+.remodal.remodal-is-closing {
+  animation-name: remodal-closing-keyframes;
+}
+
+/* Vertical align of the modal dialog */
+
+.remodal,
+.remodal-wrapper:after {
+  vertical-align: middle;
+}
+
+/* Close button */
+
+.remodal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: block;
+  overflow: visible;
+
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+
+  cursor: pointer;
+  transition: color 0.2s;
+  text-decoration: none;
+
+  color: #fff;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  opacity: 1;
+  transition: opacity .15s ease-out;
+}
+
+.remodal-close:hover,
+.remodal-close:focus {
+  opacity: .7;
+}
+
+.remodal-close:before {
+  font-family: Arial, "Helvetica CY", sans-serif !important;
+  font-size: 25px;
+  line-height: 35px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+
+  width: 35px;
+
+  content: "\00d7";
+  text-align: center;
+}
+
+/* Keyframes
+   ========================================================================== */
+
+@keyframes remodal-opening-keyframes {
+  from {
+    transform: scale(1.05);
+
+    opacity: 0;
+  }
+  to {
+    transform: none;
+
+    opacity: 1;
+  }
+}
+
+@keyframes remodal-closing-keyframes {
+  from {
+    transform: scale(1);
+
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.95);
+
+    opacity: 0;
+  }
+}
+
+@keyframes remodal-overlay-opening-keyframes {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes remodal-overlay-closing-keyframes {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Media queries
+   ========================================================================== */
+
+@media only screen and (min-width: 641px) {
+  .remodal {
+    max-width: 700px;
+  }
+}
+
+/* IE8
+   ========================================================================== */
+
+.lt-ie9 .remodal-overlay {
+  background: #2b2e38;
+}
+
+.lt-ie9 .remodal {
+  width: 700px;
+}
+
+
 font-base = 'Fira Sans', Helvetica, Arial, sans-serif
 font-condensed = 'Oswald'
 
@@ -207,7 +481,7 @@ h5
       .ads--full
         +mediaMin(size-s)
           margin-left 1.5%
-          margin-right 1.5%
+          margin-right 2.5%
 
   &__item
     margin 3% 0
@@ -1315,38 +1589,47 @@ h5
       background-image url('../images/statescoop_white.png')
 
 .subscribe
+
   &--news
-    padding 3%
+    padding 5%
     background #252525
 
-    +mediaMin(size-s)
-      padding 30px 15px
+    & ^[0]__title
+      font-size 2.2rem
+      line-height 3rem
 
-    .subscribe__title
-      font-family font-condensed
-      font-style normal
-      font-weight 300
-      font-size 2.4rem
-      line-height 2.8rem
+    & ^[0]__input
+      padding 1rem
+      font-size 2.2rem
+      line-height 3rem
 
-      +mediaMin(size-m)
-        font-size 3rem
-        line-height 3.5rem
+    & ^[0]__button
+      padding 12px 10px 8px 10px
+      font-size 2.2rem
+      line-height 3rem
 
-    .subscribe__form
-      margin 3% 0
-
-      +mediaMin(size-m)
-        margin 30px 0
+  &__icon
+    width 150px
+    height 60px
+    background url('../images/icons/subscribe_icon.png') center no-repeat
+    background-size 150px 60px
 
   &__title
     font-size 2.2rem
-    font-style italic
     line-height 3rem
     color color-white
+    font-family font-condensed
+    font-weight 300
+    margin 3rem 0
+
+    +mediaMin(size-s)
+      font-size 4.2rem
+      line-height 5rem
 
   &__additional
+    display block
     color #787878
+    margin 3rem 0
 
     +mediaMin(size-s)
       font-size 2rem
@@ -1358,28 +1641,35 @@ h5
 
   &__form
     display flex
-    margin 3% 0
+    margin 3% 0 0 0
 
   &__input
     font-family 'Helvetica Neue', Helvetica, Arial
     flex 1
     min-width 50px
-    padding 10px
+    padding 1rem
     border-radius 0
     border 0
-    font-size 2rem
-    line-height 2rem
+    font-size 2.2rem
+    line-height 3rem
     color #acacac
+
+    +mediaMin(size-s)
+      padding 1.5rem
+      font-size 2.8rem
+      line-height 3.4rem
 
   &__button
     display block
     background color-pink
     border-radius 0
     border 0
-    padding 12px 15px 8px 15px
+    padding 12px 25px 8px 25px
     font-weight 500
     color color-white
     cursor pointer
+    font-size 2.4rem
+    line-height 2.8rem
 
 .overlay
   position fixed
@@ -1452,22 +1742,23 @@ h5
         opacity 0.5
 
 .card
-  text-align left
+
   &__top
-    display flex
+    cf()
     margin-bottom 3%
 
     +mediaMin(size-m)
       margin-bottom 30px
 
   &__photo
+    float left
     max-width 125px
-    height 125px
+    height auto
     margin-right 3%
+    overflow hidden
 
     +mediaMin(size-m)
       max-width 250px
-      height 250px
       margin-right 30px
 
     img

@@ -47,9 +47,9 @@ block content
                 article.article-thumb.article-thumb--bordered.article-thumb--fixed
                   .subscribe.subscribe--news
                     .subscribe__title The best cybersecurity news, delivered straight to your inbox. Sign up for our daily newsletter.
-                    form(action="", method="post").subscribe__form
-                      input(type="text", name="name", placeholder="Email Address").subscribe__input
-                      input(type="button", name="name", value="GO").subscribe__button
+                    form(action="#", method="post").subscribe__form
+                      input(type="email", name="name", placeholder="Email Address", required).subscribe__input
+                      input(type="submit", value="GO").subscribe__button
                     span.subscribe__additional By signing up, you agree to our 
                       a(href="#") services terms.     
               .ads.ads--full

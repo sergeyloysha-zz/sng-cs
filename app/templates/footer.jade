@@ -29,3 +29,12 @@ footer.footer
   form(method="post", action="/",role="search").overlay-search-form
     input(name="search" placeholder="Type to search").overlay-search-input
   span.search-close ×
+.remodal(data-remodal-id='subscribe')
+  button.remodal-close(data-remodal-action='close')
+  .remodal-content
+    .subscribe.subscribe--modal
+      .subscribe__icon
+      .subscribe__title The best cybersecurity news, delivered straight to your inbox. Sign up for our daily newsletter.
+      form(action="", method="post").subscribe__form
+        input(type="email", name="name", placeholder="Email Address", required).subscribe__input
+        input(type="submit", value="GO").subscribe__button
