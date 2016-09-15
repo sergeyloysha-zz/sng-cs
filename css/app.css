@@ -2183,6 +2183,14 @@ h5,
   background-image: url("../images/icons/social-linkedin.svg");
   background-size: 24px 22px;
 }
+.share__link--email {
+  background-image: url("../images/icons/social-email.svg");
+  background-size: 28px 20px d;
+}
+.share__link--reddit {
+  background-image: url("../images/icons/social-reddit.svg");
+  background-size: 27px 23px;
+}
 .watch-landing {
   padding: 3% 0;
   background: #f7f7f7;
