@@ -13,7 +13,7 @@
   <body>
     <header class="header">
       <div class="header__head">
-        <div class="header__links"><a href="#" class="header__link">Subscribe</a><a href="#" class="header__link show-s">About</a><a href="#" class="header__link show-s">RSS</a></div><a href="#" class="header__logo logo"></a>
+        <div class="header__links"><a href="#subscribe" id="subscribe" class="header__link">Subscribe</a><a href="#" class="header__link show-s">About</a><a href="#" class="header__link show-s">RSS</a></div><a href="#" class="header__logo logo"></a>
         <div class="header__right"><a href="http://scoopnewsgroup.com/" target="_blank" class="header__link show-s"><span class="show-m">Brought to you by</span><i></i></a>
           <div id="search" class="header__control"><i class="header__control-icon header__control-icon--search"></i></div>
           <div id="menu" class="header__control hide-s"><i class="header__control-icon header__control-icon--menu"></i></div>
@@ -157,6 +157,19 @@
       <form method="post" action="/" role="search" class="overlay-search-form">
         <input name="search" placeholder="Type to search" class="overlay-search-input">
       </form><span class="search-close">×</span>
+    </div>
+    <div data-remodal-id="subscribe" class="remodal">
+      <button data-remodal-action="close" class="remodal-close"></button>
+      <div class="remodal-content">
+        <div class="subscribe subscribe--modal">
+          <div class="subscribe__icon"></div>
+          <div class="subscribe__title">The best cybersecurity news, delivered straight to your inbox. Sign up for our daily newsletter.</div>
+          <form action="" method="post" class="subscribe__form">
+            <input type="email" name="name" placeholder="Email Address" required class="subscribe__input">
+            <input type="submit" value="GO" class="subscribe__button">
+          </form>
+        </div>
+      </div>
     </div>
     <script src="js/app.js"></script>
   </body>

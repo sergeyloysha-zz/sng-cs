@@ -13,7 +13,7 @@
   <body>
     <header class="header">
       <div class="header__head">
-        <div class="header__links"><a href="#" class="header__link">Subscribe</a><a href="#" class="header__link show-s">About</a><a href="#" class="header__link show-s">RSS</a></div><a href="#" class="header__logo logo"></a>
+        <div class="header__links"><a href="#subscribe" id="subscribe" class="header__link">Subscribe</a><a href="#" class="header__link show-s">About</a><a href="#" class="header__link show-s">RSS</a></div><a href="#" class="header__logo logo"></a>
         <div class="header__right"><a href="http://scoopnewsgroup.com/" target="_blank" class="header__link show-s"><span class="show-m">Brought to you by</span><i></i></a>
           <div id="search" class="header__control"><i class="header__control-icon header__control-icon--search"></i></div>
           <div id="menu" class="header__control hide-s"><i class="header__control-icon header__control-icon--menu"></i></div>
@@ -39,16 +39,16 @@
           <div class="community__title"><img src="images/community.png"></div>
           <div class="community__container">
             <div class="people">
-              <div data-people-id="test" class="people__link"><img src="http://place-hold.it/400x400" class="people__photo"></div>
+              <div data-people-id="4638" class="people__link"><img src="http://place-hold.it/400x400" class="people__photo"></div>
             </div>
             <div class="people people--community show-s">
               <div class="people__link"><img src="images/community.png" class="people__photo"></div>
             </div>
             <div class="people">
-              <div data-people-id="test" class="people__link"><img src="http://place-hold.it/400x400" class="people__photo"></div>
+              <div data-people-id="2795" class="people__link"><img src="http://place-hold.it/400x400" class="people__photo"></div>
             </div>
             <div class="people people--large">
-              <div data-people-id="test" class="people__link"><img src="http://place-hold.it/400x400" class="people__photo">
+              <div data-people-id="439" class="people__link"><img src="http://place-hold.it/400x400" class="people__photo">
                 <div class="people__info"><span class="people__name">Terry Halvorsen</span><span class="people__meta">His Title, His agency name</span></div>
               </div>
             </div>
@@ -137,21 +137,23 @@
         <input name="search" placeholder="Type to search" class="overlay-search-input">
       </form><span class="search-close">×</span>
     </div>
-    <section class="overlay overlay--hidden">
-      <div class="popup"><a href="#" class="popup__control"></a>
-        <div class="popup__inner card">
-          <div class="card__top">
-            <div class="card__photo"><img src="http://place-hold.it/300x300" alt=""></div>
-            <div class="card__meta">
-              <div class="card__name">First Last</div>
-              <div class="card__meta-line">Title title title</div>
-              <div class="card__meta-line">Agency agency agency</div>
-            </div>
-          </div>
-          <div class="card__bottom"><span class="card__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</span></div>
+    <div data-remodal-id="subscribe" class="remodal">
+      <button data-remodal-action="close" class="remodal-close"></button>
+      <div class="remodal-content">
+        <div class="subscribe subscribe--modal">
+          <div class="subscribe__icon"></div>
+          <div class="subscribe__title">The best cybersecurity news, delivered straight to your inbox. Sign up for our daily newsletter.</div>
+          <form action="" method="post" class="subscribe__form">
+            <input type="email" name="name" placeholder="Email Address" required class="subscribe__input">
+            <input type="submit" value="GO" class="subscribe__button">
+          </form>
         </div>
       </div>
-    </section>
+    </div>
+    <div data-remodal-id="people" class="remodal">
+      <button data-remodal-action="close" class="remodal-close"></button>
+      <div class="remodal-content card"></div>
+    </div>
     <script src="js/app.js"></script>
   </body>
 </html>
