@@ -1126,10 +1126,13 @@ h5,
     margin: 0 -1.5%;
   }
 }
+.articles__list--home .ads--full {
+  float: left;
+}
 @media screen and (min-width: 768px) {
   .articles__list--home .ads--full {
-    margin-left: 1.5%;
-    margin-right: 2.5%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
   }
 }
 .articles__item {
@@ -1154,7 +1157,7 @@ h5,
 @media screen and (min-width: 768px) {
   .articles__item--third {
     width: 30%;
-    margin: 0 1.5% 3% 1.5%;
+    margin: 0 1.66667% 3% 1.66667%;
     float: left;
   }
 }
@@ -1605,6 +1608,7 @@ h5,
   display: block;
 }
 .ads--full {
+  width: 100%;
   margin: 0 0 3% 0;
 }
 @media screen and (min-width: 1060px) {
@@ -2185,7 +2189,7 @@ h5,
 }
 .share__link--email {
   background-image: url("../images/icons/social-email.svg");
-  background-size: 28px 20px d;
+  background-size: 28px 20px;
 }
 .share__link--reddit {
   background-image: url("../images/icons/social-reddit.svg");
