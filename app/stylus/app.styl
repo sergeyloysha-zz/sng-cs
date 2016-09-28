@@ -873,11 +873,15 @@ h5
       line-height 3.2rem
 
 .ads
-  display block
+  display
 
   &--full
+    display none
     width 100%
     margin 0 0 3% 0
+
+    +mediaMin(980px)
+      display block
 
     +mediaMin(size-m)
       margin 0 0 30px 0
