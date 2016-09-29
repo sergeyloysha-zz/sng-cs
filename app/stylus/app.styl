@@ -283,7 +283,7 @@ size-font = 1.5rem
 size-line = 2rem
 
 size-s = 768px
-size-m = 1060px
+size-m = 1035px
 size-l = 1200px
 
 color-main = rgb(0, 0, 0)
@@ -452,7 +452,7 @@ h5
   padding 3% 0
 
   +mediaMin(size-m)
-    padding 3rem 0
+    padding 4rem 0
 
 .articles
   background color-white
@@ -478,23 +478,27 @@ h5
       +mediaMin(size-s)
         margin 0 -1.5%
 
+      +mediaMin(size-m)
+        margin 0 -2rem
+
       .ads--full
         float left
         +mediaMin(size-s)
           padding-left 1.5%
           padding-right 1.5%
 
+        +mediaMin(size-m)
+          padding-left 2rem
+          padding-right 2rem
+
   &__item
     margin 3% 0
 
-    +mediaMin(size-m)
-      margin 30px 0
-
     &:first-child
-      margin 0 0 3% 0
+      margin-top 0
 
-      +mediaMin(size-m)
-        margin 0 0 30px 0
+    +mediaMin(size-m)
+      margin 4rem 0
 
     &--third
       margin 0 0 3% 0
@@ -502,6 +506,11 @@ h5
       +mediaMin(size-s)
         width 30%
         margin 0 1.66667% 3% 1.66667%
+        float left
+
+      +mediaMin(size-m)
+        width 300px
+        margin 0 2rem 4rem 2rem
         float left
 
   &__more
@@ -729,13 +738,16 @@ h5
   color #010101
   border-bottom 3px solid #000
   padding 5px 0
-  margin 0 0 3% 0
+  margin-bottom 3%
   text-transform uppercase
 
   +mediaMin(size-s)
     font-size 3.7rem
     line-height 4rem
     border-bottom 5px solid #000
+
+  +mediaMin(size-m)
+    margin-bottom 4rem
 
   &--normal
     text-transform initial
@@ -879,11 +891,9 @@ h5
     width 100%
     margin 0 0 3% 0
 
-    +mediaMin(980px)
-      display block
-
     +mediaMin(size-m)
-      margin 0 0 30px 0
+      display block
+      margin 0 0 4rem 0
 
   &__element
     display block
@@ -1924,12 +1934,10 @@ h5
 .author-intro
   border-bottom 7px solid #efefef
   padding 2rem 0
-  margin-bottom 1rem
   color #4c4c4c
 
   +mediaMin(size-s)
     padding 4rem 0
-    margin-bottom 2rem
     font-size 2rem
     line-height 2.8rem
 
